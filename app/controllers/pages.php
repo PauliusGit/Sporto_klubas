@@ -1,5 +1,5 @@
 <?php
-// Pages class responsible for controlin Pages
+// Pages class responsible for controlling Pages
 class Pages extends Controller
 {
     public function __construct()
