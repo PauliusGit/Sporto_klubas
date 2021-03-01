@@ -9,31 +9,31 @@
             <form action="<?php echo URLROOT; ?>/users/register" method="post">
                 <div class="form-group">
                     <label for="name">Vardas: <sup>*</sup></label>
-                    <input type="text" name="firstName" class="form-control form-control-lg <?php echo (!empty($data['firstName_err'])) ? 'is-invalid' : '' ?>" 
+                    <input type="text" name="firstName" autocomplete="off" class="form-control form-control-lg <?php echo (!empty($data['firstName_err'])) ? 'is-invalid' : '' ?>" 
                     value="<?php echo $data['firstName']; ?>">
                     <span class="invalid-feedback"><?php echo $data['firstName_err']; ?></span>
                 </div>
                 <div class="form-group">
                     <label for="Surname">Pavardė: <sup>*</sup></label>
-                    <input type="text" name="lastName" class="form-control form-control-lg <?php echo (!empty($data['lastName_err'])) ? 'is-invalid' : '' ?>" 
+                    <input type="text" name="lastName" autocomplete="off" class="form-control form-control-lg <?php echo (!empty($data['lastName_err'])) ? 'is-invalid' : '' ?>" 
                     value="<?php echo $data['lastName']; ?>">
                     <span class="invalid-feedback"><?php echo $data['lastName_err']; ?></span>
                 </div>
                 <div class="form-group">
                     <label for="Email">El. Paštas: <sup>*</sup></label>
-                    <input type="text" name="email" class="form-control form-control-lg <?php echo (!empty($data['email_err'])) ? 'is-invalid' : '' ?>" 
+                    <input type="text" name="email" autocomplete="off" class="form-control form-control-lg <?php echo (!empty($data['email_err'])) ? 'is-invalid' : '' ?>" 
                     value="<?php echo $data['email']; ?>">
                     <span class="invalid-feedback"><?php echo $data['email_err']; ?></span>
                 </div>
                 <div class="form-group">
                     <label for="Password">Slaptažodis: <sup>*</sup></label>
-                    <input type="password" name="password" class="form-control form-control-lg <?php echo (!empty($data['password_err'])) ? 'is-invalid' : '' ?>" 
+                    <input type="password" name="password" autocomplete="off" class="form-control form-control-lg <?php echo (!empty($data['password_err'])) ? 'is-invalid' : '' ?>" 
                     value="<?php echo $data['password']; ?>">
                     <span class="invalid-feedback"><?php echo $data['password_err']; ?></span>
                 </div>
                 <div class="form-group">
                     <label for="TelNumber">Telefono numeris:</label>
-                    <input type="text" name="phoneNr" class="form-control form-control-lg" value="<?php echo $data['phoneNr']; ?>">
+                    <input type="text" name="phoneNr" autocomplete="off" class="form-control form-control-lg" value="<?php echo $data['phoneNr']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="Address">Namų adresas:</label>
