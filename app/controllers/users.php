@@ -1,5 +1,9 @@
 <?php 
 
+namespace srcApp\app\controllers;
+
+use srcApp\app\libraries\Controller;
+
 class Users extends Controller
 {
     public function __construct()
@@ -59,6 +63,9 @@ class Users extends Controller
                 $data['password_err'] = 'Password must be at least 6 characters';
             }
 
+            if(empty($data['phoneNr'])) {
+                $data['phoneNr'] = '0';
+            }
 
             if(empty($data['email_err']) && empty($data['firstName_err']) && empty($data['lastName_err']) && empty($data['password_err'])) {
                 $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);

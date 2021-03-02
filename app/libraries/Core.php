@@ -1,4 +1,13 @@
 <?php
+
+
+namespace srcApp\app\libraries;
+
+use srcApp\app\controllers\API;
+use srcApp\app\controllers\Pages;
+use srcApp\app\controllers\Posts;
+use srcApp\app\controllers\Users;
+
 /* App Core class
  * Create URL & loads controller
  * URL format /controller/method/params
@@ -10,6 +19,7 @@ class Core
     protected $currentMethod = 'index';
     protected $params = [];
 
+    
     public function __construct()
     {
         $url = $this->getUrl();
@@ -24,10 +34,20 @@ class Core
             }
         }
         // Require the controller that user asked
-        require_once '../app/controllers/' . $this->currentController . '.php';
+        //require_once '../app/controllers/' . $this->currentController . '.php';
+
+        if($this->currentController == 'API'){
+            $this->currentController = new API;
+        }elseif($this->currentController == 'Users'){
+            $this->currentController = new Users;
+        }elseif($this->currentController == 'Pages'){
+            $this->currentController = new Pages;
+        }elseif($this->currentController == 'Posts'){
+            $this->currentController = new Posts;
+        }
 
         // instanciate an object of current class
-        $this->currentController = new $this->currentController;
+        //$this->currentController = new $this->currentController;
 
         // check for second(method) values in url params
         if (isset($url[1])) {

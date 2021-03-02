@@ -1,4 +1,9 @@
 <?php
+
+namespace srcApp\app\controllers;
+
+use srcApp\app\libraries\Controller;
+
 // Pages class responsible for controlling Pages
 class Pages extends Controller
 {

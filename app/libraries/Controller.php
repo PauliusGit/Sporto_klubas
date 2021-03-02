@@ -1,10 +1,15 @@
 <?php
 
+namespace srcApp\app\libraries;
 
-/* App Controller
+use srcApp\app\models\Post;
+use srcApp\app\models\User;
+
+/** 
+ * App Controller
  * Base controller
  * Load models and views
- */
+*/
 class Controller
 {
     // Load model 
@@ -12,10 +17,15 @@ class Controller
     {
         if (file_exists('../app/models/' . $model . '.php')) {
             // require model file
-            require_once '../app/models/' . $model . '.php';
+            //require_once '../app/models/' . $model . '.php';
 
             //Make object of that class
-            return new $model();
+            if($model == 'Post'){
+                return new Post;
+            }elseif($model == 'User'){
+                return new User;
+            }
+            
         } else {
             die('model does not exist');
         }

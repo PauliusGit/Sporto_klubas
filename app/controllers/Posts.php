@@ -1,5 +1,9 @@
 <?php 
 
+namespace srcApp\app\controllers;
+
+use srcApp\app\libraries\Controller;
+
 class Posts extends Controller
 {
 

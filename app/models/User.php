@@ -1,5 +1,7 @@
 <?php
 
+namespace srcApp\app\models;
+
 /*
     User class
     query statements
