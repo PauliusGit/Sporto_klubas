@@ -3,13 +3,15 @@
 namespace srcApp\app\controllers;
 
 use srcApp\app\libraries\Controller;
+use srcApp\app\models\Post;
 
 class API extends Controller
 {
     private $commentModel;
+
     public function __construct()
     {
-        $this->commentModel = $this->model('post');
+        $this->commentModel = new Post;
     }
 
     public function addComment()
@@ -19,7 +21,7 @@ class API extends Controller
             'userId' => $_POST['userId'],
             'userName' => $_POST['userName'],
             'comment' => trim($_POST['comment']),
-            'commentErr' => '',
+            'commentErr' => ''
         ];
 
         if(empty($_POST['comment'])) {
@@ -31,9 +33,9 @@ class API extends Controller
         if(empty($data['commentErr'])) {
             $this->commentModel->addComment($data);
         }        
-        
+        //print_r($data);
         header('Content-Type: application/json');
-        echo json_encode($_POST);
+        echo json_encode($data);
         die();
     }
 
