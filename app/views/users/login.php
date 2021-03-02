@@ -1,27 +1,27 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 
- 
+<div class="container">
 <div class="row">
     <div class="col-md-6 mx-auto">
         <div class="card card-body bg-light mt-5">
             <h2>Prisijungti</h2>
             <p>Užpildykite laukelius norint prisijungti</p>
             <form action="<?php echo URLROOT; ?>/users/login" method="post">
-                <div class="form-group">
+                <div class="form-group mt-5">
                     <label for="Email">El. Paštas: <sup>*</sup></label>
                     <input type="text" name="email" autocomplete="on" class="form-control form-control-lg <?php echo (!empty($data['email_err'])) ? 'is-invalid' : '' ?>" 
                     value="<?php echo $data['email']; ?>">
                     <span class="invalid-feedback"><?php echo $data['email_err']; ?></span>
                 </div>
-                <div class="form-group">
+                <div class="form-group mt-2">
                     <label for="Password">Slaptažodis:<sup>*</sup></label>
                     <input type="password" name="password" autocomplete="off" class="form-control form-control-lg <?php echo (!empty($data['password_err'])) ? 'is-invalid' : '' ?>" 
                     value="<?php echo $data['password']; ?>">
                     <span class="invalid-feedback"><?php echo $data['password_err']; ?></span>
                 </div>
-                <div class="row">
+                <div class="row mt-5">
                     <div class="col">
-                        <input type="submit" value="Prisijungti" class="btn btn-success btn-block">
+                        <input type="submit" value="Prisijungti" class="btn btn-success btn-block px-5">
                     </div>
                     <div class="col">
                         <a href="<?php echo URLROOT; ?>/users/register" class="btn btn-light btn-block">Neturite paskyros, užsiregistruokite?</a>
@@ -30,6 +30,7 @@
             </form>
         </div>
     </div>
+</div>
 </div>
 
 <?php require APPROOT . '/views/inc/footer.php';?>

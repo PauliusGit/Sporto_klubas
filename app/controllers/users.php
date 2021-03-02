@@ -3,12 +3,14 @@
 namespace srcApp\app\controllers;
 
 use srcApp\app\libraries\Controller;
+use srcApp\app\models\User;
 
 class Users extends Controller
 {
     public function __construct()
     {
-        $this->userModel = $this->model('User');
+        //$this->userModel = $this->model('User');
+        $this->userModel = new User;
     }
 
     public function register()

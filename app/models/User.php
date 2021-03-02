@@ -2,6 +2,8 @@
 
 namespace srcApp\app\models;
 
+use srcApp\app\libraries\Database;
+
 /*
     User class
     query statements

@@ -1,9 +1,9 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 
- 
+<div class="container">
 <div class="row">
     <div class="col-md-6 mx-auto">
-        <div class="card card-body bg-light mt-5">
+        <div class="card card-body bg-light mt-3 mb-3">
             <h2>Susikurkite paskyrą čia</h2>
             <p>Užpildykite būtinus laukus (pažymėta žvaigždute)</p>
             <form action="<?php echo URLROOT; ?>/users/register" method="post">
@@ -39,9 +39,9 @@
                     <label for="Address">Namų adresas:</label>
                     <input type="text" name="address" class="form-control form-control-lg"  value="<?php echo $data['address']; ?>">
                 </div>
-                <div class="row">
+                <div class="row mt-3 ">
                     <div class="col">
-                        <input type="submit" value="Registruotis" class="btn btn-success btn-block">
+                        <input type="submit" value="Registruotis" class="btn btn-success btn-block px-5">
                     </div>
                     <div class="col">
                         <a href="<?php echo URLROOT; ?>/users/login" class="btn btn-light btn-block">Turite paskyrą, prisijungkite?</a>
@@ -50,6 +50,7 @@
             </form>
         </div>
     </div>
+</div>
 </div>
 
 <?php require APPROOT . '/views/inc/footer.php';?>
