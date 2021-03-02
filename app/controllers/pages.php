@@ -23,15 +23,5 @@ class Pages extends Controller
         $this->view('pages/index', $data);
     }
 
-    public function about()
-    {
-        // load the view
-        // create some data to load into vie
-        $data = [
-            'title' => 'Welcome to About page - ' . SITENAME,
-        ];
 
-        // load the view
-        $this->view('pages/about', $data);
-    }
 }
